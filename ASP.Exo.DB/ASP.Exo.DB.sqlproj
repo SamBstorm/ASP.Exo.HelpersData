@@ -56,23 +56,23 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Tables" />
-    <Folder Include="StoredProcedures" />
-    <Folder Include="ScalarFunctions" />
     <Folder Include="Views" />
-  </ItemGroup>
-  <ItemGroup>
-    <Build Include="Tables\AspUser.sql" />
-    <Build Include="StoredProcedures\SP_AspUser_Insert.sql" />
-    <Build Include="ScalarFunctions\SF_SaltAndHash.sql" />
-    <Build Include="StoredProcedures\SP_AspUser_Update.sql" />
-    <Build Include="StoredProcedures\SP_AspUser_Delete.sql" />
-    <Build Include="Views\V_AspUser_Enable.sql" />
-    <Build Include="StoredProcedures\SP_AspUser_GetById.sql" />
-    <Build Include="StoredProcedures\SP_AspUser_GetAll.sql" />
-    <Build Include="StoredProcedures\SP_AspUser_CheckPassword.sql" />
+    <Folder Include="ScalarFunctions" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ASP.Exo.DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Views\V_AspUser_Enable.sql" />
+    <Build Include="ScalarFunctions\SF_SaltAndHash.sql" />
+    <Build Include="StoredProcedures\SP_AspUser_CheckPassword.sql" />
+    <Build Include="StoredProcedures\SP_AspUser_Delete.sql" />
+    <Build Include="StoredProcedures\SP_AspUser_GetAll.sql" />
+    <Build Include="StoredProcedures\SP_AspUser_GetById.sql" />
+    <Build Include="StoredProcedures\SP_AspUser_Insert.sql" />
+    <Build Include="StoredProcedures\SP_AspUser_Update.sql" />
+    <Build Include="Tables\AspUser.sql" />
   </ItemGroup>
 </Project>
