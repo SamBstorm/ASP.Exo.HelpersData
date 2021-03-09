@@ -24,7 +24,7 @@ namespace ASP.Exo.HelpersData.Infrastructs
             if (!int.TryParse(month, out m)) return new ValidationResult("Le format est incorrect");
             if (!int.TryParse(day, out d)) return new ValidationResult("Le format est incorrect");
             DateTime dt = new DateTime(1900 + y, m, d);
-            DateTime bd = (DateTime)context.ObjectType.GetProperty(_fieldName).GetValue(context.ObjectInstance));
+            DateTime bd = (DateTime)context.ObjectType.GetProperty(_fieldName).GetValue(context.ObjectInstance);
             if (dt != bd) return new ValidationResult("Dates ne correspondent pas.");
             return ValidationResult.Success;
         }
