@@ -44,7 +44,7 @@ namespace ASP.Exo.HelpersData.Models.Views
         [Required]
         [Display(Name ="N° de registre National *")]
         [RegularExpression(@"\d{11,11}", ErrorMessage ="Le n° de registre national doit être composé de 11 numéro.")]
-        //[CustomRegNationalAttribute]
+        [CustomValidationRegNational(nameof(BirthDate))]
         public string RegNational { get; set; }
         [Display(Name ="Biographie (Max 120 caractères)")]
         [DataType(DataType.MultilineText)]
