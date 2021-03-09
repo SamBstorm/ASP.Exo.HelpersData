@@ -124,6 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructs\CustomHtmlHelpers.cs" />
     <Compile Include="Infrastructs\CustomValidationDateAttribute.cs" />
     <Compile Include="Infrastructs\CustomValidationRegNationalAttribute.cs" />
     <Compile Include="Models\AspUser.cs" />
@@ -170,6 +171,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AspUser\Register.cshtml" />
+    <Content Include="Views\AspUser\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

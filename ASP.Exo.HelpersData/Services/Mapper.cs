@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using ASP.Exo.HelpersData.Models.Views;
 
 namespace ASP.Exo.HelpersData.Services
 {
@@ -36,6 +37,21 @@ namespace ASP.Exo.HelpersData.Services
                 RegNational = entity.RegNational,
                 Bio = entity.Bio
                 };
+        }
+
+        public static AspUser ToClient(this AspUserRegisterForm form)
+        {
+            if (form is null) return null;
+            return new AspUser(
+                    form.Id,
+                    form.Mail,
+                    form.Password,
+                    form.LastName,
+                    form.FirstName,
+                    form.BirthDate,
+                    form.RegNational,
+                    form.Bio
+                    );
         }
     }
 }
